@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New User Sign Up - Mediledger</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+ 
+
+  <main class="login-container">
+    <section class="login-box">
+      <h1 class="login-title">Create Account</h1>
+      <p class="login-subtitle">Register for Mediledger</p>
+      <form id="signUpForm" class="sign-up-form" aria-label="Sign Up Form" >
+        <div class="input-group">
+          <label for="newUsername" class="input-label">Username</label>
+          <input id="newUsername" name="newUsername" type="text" placeholder="Choose a username" required />
+        </div>
+        <div class="input-group">
+          <label for="newEmail" class="input-label">Email</label>
+          <input id="newEmail" name="newEmail" type="email" placeholder="Enter your email" required />
+        </div>
+        <div class="input-group">
+          <label for="newPassword" class="input-label">Password</label>
+          <input id="newPassword" name="newPassword" type="password" placeholder="Create password" required />
+          <small>Password must be at least 8 characters, including uppercase, lowercase, and a number.</small>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-sign-up">Sign Up</button>
+          <a href="login.html" class="btn-cancel" style="text-align:center;display:inline-block;text-decoration:none;">Cancel</a>
+        </div>
+      </form>
+    </section>
+
+    <section class="login-image" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1536859355440-43150930a3ca?auto=format&fit=crop&w=800&q=80" alt="" />
+      <p class="image-caption">Track your meds. Stay healthy.</p>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

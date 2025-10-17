@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forgot Password - SmartMed</title>
+  <link rel="stylesheet" href="forgot.css" />
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://cdn.pixabay.com/video/2025/06/10/284876_large.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <main class="forgot-container">
+  <section class="forgot-box">
+    <h1 class="forgot-title">Reset Your Password</h1>
+    <form id="requestOtpForm" class="forgot-change-form">
+      <p class="forgot-subtitle">Select verification method:</p>
+      <div class="radio-group">
+        <label><input type="radio" name="method" value="email" checked /> Email</label>
+        <label><input type="radio" name="method" value="phone" /> Phone</label>
+      </div>
+      <div class="input-group" id="emailGroup">
+        <label for="forgotEmail" class="input-label">Email</label>
+        <input id="forgotEmail" name="forgotEmail" type="email" placeholder="Enter your email" />
+      </div>
+      <div class="input-group" id="phoneGroup" style="display:none;">
+        <label for="forgotPhone" class="input-label">Phone Number</label>
+        <input id="forgotPhone" name="forgotPhone" type="tel" placeholder="Enter your phone number" maxlength="10" pattern="[0-9]{10}" />
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-reset">Send OTP</button>
+        <a href="login.html" class="btn-cancel">Cancel</a>
+      </div>
+    </form>
+    <form id="otpForm" class="forgot-change-form" style="display:none;">
+      <p class="forgot-subtitle">Enter the OTP that was sent to your email or phone:</p>
+      <div class="input-group">
+        <label for="otp" class="input-label">OTP</label>
+        <input id="otp" name="otp" type="text" maxlength="6" placeholder="6-digit OTP" required />
+      </div>
+      <div class="input-group">
+        <label for="newResetPassword" class="input-label">New Password</label>
+        <input id="newResetPassword" name="newResetPassword" type="password" placeholder="Create new password" required />
+        <small>Password must be at least 8 characters, including uppercase, lowercase, and a number.</small>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-reset">Change Password</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

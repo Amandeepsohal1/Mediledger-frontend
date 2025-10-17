@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MEDILEDGER-Smart Medicine Reminder</title>
+  <link rel="stylesheet" href="smr.css" />
+</head>
+<body>
+  
+  
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="#" class="logo" tabindex="0">Mediledger</a>
+      <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#home" tabindex="0">Home</a></li>
+          <li><a href="#features" tabindex="0">Features</a></li>
+          <li><a href="#reminder" tabindex="0">Set Reminder</a></li>
+          <li><a href="#contact" tabindex="0">Contact</a></li>
+          <li><a href="#about" tabindex="0">About Us</a></li>
+        </ul>
+      </nav>
+      <button aria-label="Toggle menu" class="menu-toggle" aria-expanded="false" tabindex="0">☰</button>
+    </div>
+  </header>
+
+  <main role="main">
+    <section id="home" class="hero-section" tabindex="-1" aria-label="Homepage introduction">
+      <div class="container">
+        <h1>Never Miss Your Medicine Again</h1>
+        <p>Smart reminders to keep your health on track.</p>
+        <a href="#reminder" class="btn-primary" tabindex="0">Set Your First Reminder</a>
+      </div>
+    </section>
+
+    <section id="features" class="features-section" tabindex="-1" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading">Features</h2>
+        <div class="features-grid">
+          <article class="feature-item" tabindex="0" aria-label="Custom Schedules feature">
+            <h3>Custom Schedules</h3>
+            <p>Set reminders according to your medicine dosage and timing.</p>
+          </article>
+          <article class="feature-item" tabindex="0" aria-label="Notifications feature">
+            <h3>Notifications</h3>
+            <p>Receive alerts via email, SMS, or app notifications.</p>
+          </article>
+          <article class="feature-item" tabindex="0" aria-label="Multiple Users feature">
+            <h3>Multiple Users</h3>
+            <p>Manage reminders for yourself and your family members.</p>
+          </article>
+          <article class="feature-item" tabindex="0" aria-label="IoT Integration feature">
+            <h3>IoT Integration</h3>
+            <p>Connect with IoT health devices for automatic updates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reminder" class="reminder-section" tabindex="-1" aria-labelledby="reminder-heading">
+      <div class="container">
+        <h2 id="reminder-heading">Set Medicine Reminder</h2>
+        <form id="reminderForm" aria-label="Medicine reminder form" novalidate>
+
+  <div class="form-group">
+    <label for="medicineName">Medicine Name</label>
+    <input type="text" id="medicineName" name="medicineName" placeholder="Enter Medicine Name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="dosage">Dosage</label>
+    <input type="text" id="dosage" name="dosage" placeholder="e.g. 2 pills" required />
+  </div>
+
+  <div class="form-group">
+    <label for="frequency">Frequency</label>
+    <select id="frequency" name="frequency" required>
+      <option value="" disabled selected>Select Frequency</option>
+      <option value="once_a_day">Once a day</option>
+      <option value="twice_a_day">Twice a day</option>
+      <option value="thrice_a_day">Thrice a day</option>
+      <option value="custom">Custom</option>
+    </select>
+  </div>
+
+  <div class="form-group reminder-times" id="reminderTimesGroup">
+    <label for="reminderTime1" id="reminderTimesLabel">Reminder Time(s)</label>
+    <input type="time" id="reminderTime1" name="reminderTime1" required />
+   
+  </div>
+
+  <div class="form-group">
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate" name="startDate" required />
+  </div>
+  
+  <button type="submit">Save Reminder</button>
+</form>
+
+      </div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-heading" tabindex="-1">
+      <div class="container">
+        <h2 id="about-heading">About Mediledger</h2>
+        <p>Mediledger is dedicated to helping people manage their medicines effectively with intuitive reminders, notifications, and integration with modern health devices.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading" tabindex="-1">
+      <div class="container">
+        <h2 id="contact-heading">Contact Us</h2>
+        <form id="contactForm" aria-label="Contact form" novalidate>
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" name="contactName" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="contactEmail" placeholder="Your email" required />
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="contactMessage" rows="5" placeholder="Write your message..." required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" tabindex="-1">
+    <div class="container">
+      <p>&copy; 2025 Smart Medicine Reminder. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
